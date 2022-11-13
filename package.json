@@ -15,7 +15,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "prebuild": "babel src/components --out-dir lib --copy-files",
+    "prepare": "npm run prebuild"
   },
   "eslintConfig": {
     "extends": [
@@ -34,5 +36,11 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.19.3",
+    "@babel/core": "^7.20.2",
+    "@babel/preset-react": "^7.18.6",
+    "@babel/preset-stage-0": "^7.8.3"
   }
 }
